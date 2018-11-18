@@ -21,3 +21,38 @@ body {
   background-color: #ECEFF1;
   color: #333;
 }
+
+.grid-container {
+  margin: 5rem;
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(6, auto);
+  border: 2px solid rgb(83, 156, 206);
+}
+
+.grid {
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.8rem;
+  background-color: rgb(141, 185, 214);
+}
+
+.blank {
+  background-color: #ECEFF1;
+  height: 4.2rem;
+  width: 4.2rem;
+  position: relative;
+  border-radius: 50%;
+}
+
+.counter {
+  background-color: rgb(235, 52, 68);
+  height: 4.2rem;
+  width: 4.2rem;
+  position: relative;
+  border-radius: 50%;
+}
