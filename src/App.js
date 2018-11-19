@@ -53,30 +53,23 @@ class App extends Component {
       }
       return spot
     })
-    const gameboard = this.falling(newGameboard, indexToBeChanged, whosTurnIsIt)
-    console.log(gameboard)
+    const gameboard = this.falling(newGameboard, indexToBeChanged, whosTurnIsItNow)
     this.setState({ 
       gameboard,
       whosTurnIsIt
     })
   } 
 
-  playersTurnCounter = () => {
-    const redCounter = <div className="counter red"></div>
-    const yellowCounter = <div className="counter yellow"></div>
-    if(this.state.whosTurnIsIt === PLAYER_1) {
-      return redCounter
-    }else {
-      return yellowCounter
-    }
-  }
+  playersTurnCounter = () => 
+    this.state.whosTurnIsIt === PLAYER_1 ? <div className="counter red"></div> : <div className="counter yellow"></div>
 
   falling = (arr, position, constant) => {
     const widthOfGrid = 7
     const orignalPosition = position
     for(let i = position; i < arr.length; i += widthOfGrid) {
       if(arr[position + widthOfGrid] === EMPTY) {
-        i += widthOfGrid
+        position += widthOfGrid
+        arr[orignalPosition] = EMPTY
       }
     }
     arr[position] = constant
