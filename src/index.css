@@ -50,9 +50,16 @@ body {
 }
 
 .counter {
-  background-color: rgb(235, 52, 68);
   height: 4.2rem;
   width: 4.2rem;
   position: relative;
   border-radius: 50%;
+}
+
+.red {
+  background-color: rgb(235, 52, 68);
+}
+
+.yellow {
+  background-color: rgb(210, 212, 63);
 }
